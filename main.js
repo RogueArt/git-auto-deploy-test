@@ -6,7 +6,7 @@ const app = express()
 app.use(express.static(__dirname))
 app.set('view engine', 'ejs')
 
-const PORT = 3001
+const PORT = 8080
 
 // Index page
 let count = 0
@@ -18,5 +18,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(process.env.PORT ?? PORT, () => {
-  console.log(`Server listening at http://localhost:${process.env.PORT}`)
+  console.log(`Server listening at http://localhost:${process.env.PORT ?? PORT}`)
 })
