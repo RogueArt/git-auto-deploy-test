@@ -3,7 +3,6 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
-console.log(__dirname)
 app.use(express.static(__dirname))
 app.set('view engine', 'ejs')
 
